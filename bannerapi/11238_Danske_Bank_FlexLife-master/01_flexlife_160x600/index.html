@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		160 x 600
+	</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://track.adform.net/serving/scripts/trackpoint/" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script src="https://s1.adform.net/banners/scripts/rmb/Adform.DHTML.js"></script>
+
+            
+	<script src="DrawSVGPlugin.min.js"></script>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			border: none;
+		}
+
+		#banner {
+			display: block;
+			width: 160px;
+			height: 600px;
+			position: relative;
+			overflow: hidden;
+			cursor: pointer;
+			border: 1px solid #cccccc;
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			background-color: #000000;
+		}
+
+		#exit_click_area {
+			position: absolute;
+			z-index: 100;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			cursor: pointer;
+		}
+
+		.img {
+			position: absolute;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		#bg {
+			width: 100%;
+			height: 100%;
+			background-color: #d7e9f1;
+			z-index: 0;
+		}
+		#txt0 {
+			clip-path: url(#clipPath);
+		}
+		#logo {
+			left: 9px;
+			top: 562px;
+		}
+
+		#btn {
+			left: 21px;
+			top: 508px;
+		}
+
+		#txt0 {
+			left: 16px;
+			top: 193px;
+		}
+
+		#txt1 {
+			left: 22px;
+			top: 216px;
+		}
+
+		#txt2 {
+			left: 57px;
+			top: 305px;
+		}
+
+		#txt3 {
+			left: 309px;
+			top: 101px;
+		}
+
+		#txt4 {
+			left: 35px;
+			top: 339px;
+		}
+
+		#path {
+			stroke: #a21b25;
+			fill: none;
+		}
+
+		#line-svg-container {
+			top: 122px;
+			left: 11px;
+			width: 133px;
+		}
+		#spool {
+			left: -30px;
+			top: 10px;
+		}
+		#clipsvg {
+			left: 0px;
+			fill:blue;
+			z-index: 0;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<div id="banner">
+		<div id="exit_click_area"></div>
+		<div id="bg" alt="" class="img"></div>
+
+		<img src="assets/btn.png" class="img" alt="" id="btn">
+		<img src="assets/logo.png" class="img" alt="" id="logo">
+		<img src="assets/txt0.png" class="img" alt="" id="txt0">
+		<img src="assets/txt1.png" class="img" alt="" id="txt1">
+		<img src="assets/txt2.png" class="img" alt="" id="txt2">
+		<img src="assets/txt3.png" class="img" alt="" id="txt3">
+		<img src="assets/txt4.png" class="img" alt="" id="txt4">
+		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="line-svg-container" class="img" viewBox="0 0 135 380">
+			<path id="path" d="M92.4.7l18.7.5A16.7,16.7,0,0,1,127.4,18c0,6.1-.1,19.1-.2,29a12.8,12.8,0,0,1-12.6,12.7l-45.6.5a5.2,5.2,0,0,0-5.2,5.2V78.1a5.3,5.3,0,0,0,5.3,5.4h58.9a6.3,6.3,0,0,1,6.3,6.2l.3,27a5,5,0,0,1-5,5.1c-20.4.2-97,1.1-114.5,1.1A13.7,13.7,0,0,0,1,136.5L.8,202.3a4.5,4.5,0,0,0,4.5,4.5H25.9a5.3,5.3,0,0,0,5.4-5.3l.4-25.3L66,148.7l14.4,11.6v-7.7h10l-.4,14.3L102,176l-.7,18.3h16.4a9.6,9.6,0,0,1,9.6,9.6l-.2,49.8a12.1,12.1,0,0,1-12.3,12l-106,.3A7.7,7.7,0,0,0,1,273.8v41a10.4,10.4,0,0,0,10.2,10.4l42.6.9a26.8,26.8,0,0,1-3.9,11.2,16.5,16.5,0,0,0-2.1,7.4v9.7a4.1,4.1,0,0,0,1,2.6c1.3,1.2,4,.9,5.8.9,1.3,2.7,4.4,2.2,6.9,2.2,1.7,1.5,4.3,1.3,6.5,1.3v15.7a2.5,2.5,0,0,0,2,2.3,7.5,7.5,0,0,0,3,0A2.8,2.8,0,0,0,75,377c.2-5.9.1-18.8.1-24.7v-1.6l1.1,1.1c1.1,1.1,3,2.9,4.7,2.9a3.7,3.7,0,0,0,3.6-3.8c0-2.4-2.6-5.1-4.2-6.8A18.2,18.2,0,0,1,77,340a96.2,96.2,0,0,1-3.5-11l-.6-1.9"/>
+		</svg>
+		<img src="assets/img0.png" class="img" alt="" id="spool">
+		<svg id="clipsvg" class="img" width="160" height="600">
+			<defs>
+				<clipPath id="clipPath">
+					<rect id="cliprect" width="160" height="600" x="0" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"/>
+				</clipPath>
+			</defs>
+		</svg>
+
+	</div>
+			
+
+	<script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>

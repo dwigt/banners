@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>
+		320 x 320
+	</title>
+	<meta name="ad.size" content="width=320,height=320">
+	<script type="text/javascript">
+		var clickTag = "http://www.google.com"; 
+	</script>
+	<script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<style type="text/css">
+
+    @font-face {
+        font-family: 'Demi';
+        src: url('fonts/ITCAvantGardePro-Demi.eot');
+        src: local('☺'), url('fonts/ITCAvantGardePro-Demi.woff') format('woff'), url('fonts/ITCAvantGardePro-Demi.ttf') format('truetype'), url('fonts/ITCAvantGardePro-Demi.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }    
+
+    @font-face {
+        font-family: 'Book';
+        src: url('fonts/ITCAvantGardePro-Bk.eot');
+        src: local('☺'), url('fonts/ITCAvantGardePro-Bk.woff') format('woff'), url('fonts/ITCAvantGardePro-Bk.ttf') format('truetype'), url('fonts/ITCAvantGardePro-Bk.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+	.textDemi{
+		font-family: 'Demi';
+		text-transform: uppercase;
+	}
+	.textBook{
+		font-family: 'Book';
+		text-transform: uppercase;		
+	}
+
+	*{
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+	p{
+		color: white;
+		display: inline;
+	}
+	#banner{
+		display: block;
+		width: 320px;
+		height: 320px;
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+		border: 1px solid #fff;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		background-color: #000
+	}
+	#exit_click_area{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0px;
+		top: 0px;
+		overflow: hidden;
+		background-image: none;
+		z-index: 4;
+	}
+	.img{
+		position: absolute;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}	
+
+	#logoBig{
+		left: 55px;
+		top: 117px;
+	}
+	#logoSmall{
+		left: 55px;
+		top: 17px;
+	}
+
+	#btn {
+		left: 82px;
+		top: 233px;
+		line-height: 43px;
+		font-size: 21px;
+		letter-spacing: 0.2em;
+	}
+
+	#text1Scene2{
+		font-size: 15px;
+		letter-spacing: 0.3em;
+		left: 67px;
+		top: 54px;
+	}
+	#text2Scene2{
+		font-size: 15px;
+		letter-spacing: 0.3em;
+		left: 155px;
+		top: 72px;
+	}
+	#text3Scene2{
+		font-size: 15px;
+		letter-spacing: 0.3em;
+		left: 56px;
+		top: 90px;
+	}
+	#text4Scene2{
+		font-size: 15px;
+		letter-spacing: 0.3em;
+		left: 155px;
+		top: 110px;
+	}
+	#bigText{
+		font-size: 35px;
+		letter-spacing: 0.15em;
+		left: 62px;
+		top: 147px;
+		text-align: center;
+	}
+
+	#shoe {
+		left: 51px;
+		top: 95px;
+	}
+	
+	#cta{
+		width: 148px;
+		height: 47px;
+		border: 1px solid #e0e0e0;
+		box-sizing: border-box;
+		top: 237px;
+		left: 86px;
+		text-align: center;
+		font-family: 'Book';
+		font-size: 11px;
+		line-height: 47px;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		-webkit-backface-visibility: hidden;
+        -webkit-transform: translateZ(0) scale(1.0, 1.0); 
+	}
+	#scene1, #scene2, #scene3{
+		position: relative;
+	}
+	</style>
+	
+</head>
+<body>
+	<div id="banner">
+		<a href="javascript:window.open(window.clickTag)">
+			<div id="exit_click_area"></div>
+			<video id="video1" src="assets/video_320x320.mp4" muted="yes" class="img"></video>
+			<div id="scene1">
+				<img src="assets/logo.png" alt="" id="logoBig" class="img">
+			</div>			
+			<div id="scene2">
+				<p id="text1Scene2" class="img textDemi">premium leather</p>
+				<p id="text2Scene2" class="img textBook"> x </p>
+				<p id="text3Scene2" class="img textDemi"> dynamic comfort</p>
+				<p id="text4Scene2" class="img textDemi">=</p>
+				<p id="bigText" class="img textDemi">perpetual<br>natural<br>motion</p>
+				
+			</div>			
+			<div id="scene3">
+				<img src="assets/bg.jpg" class="img" id="bg">
+				<img src="assets/logo.png" alt="" id="logoSmall" class="img">
+				<img src="assets/shoe.png" alt="" id="shoe" class="img">				
+				<div id="cta" class="img">
+					<p id="ctaText">see more</p>
+				</div>
+			</div>	
+		</a>
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+	
+</body>
+</html>

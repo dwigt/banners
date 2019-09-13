@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>
+		160 x 600
+	</title>
+	<meta name="ad.size" content="width=160,height=600">
+	<script type="text/javascript">
+		var clickTag = "http://www.google.com"; 
+	</script>
+	<script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<style type="text/css">
+
+   @font-face {
+        font-family: 'GothicBold';
+        src: url('fonts/GOTHICB.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('fonts/GOTHICB.woff') format('woff'), /* Pretty Modern Browsers */
+        url('fonts/GOTHICB.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('fonts/GOTHICB.otf') format('opentype')/* Safari, Android, iOS */
+    }
+    
+    @font-face {
+        font-family: 'Demi';
+        src: url('fonts/ITCAvantGardePro-Demi.eot');
+        src: local('☺'), url('fonts/ITCAvantGardePro-Demi.woff') format('woff'), url('fonts/ITCAvantGardePro-Demi.ttf') format('truetype'), url('fonts/ITCAvantGardePro-Demi.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }    
+
+    @font-face {
+        font-family: 'Book';
+        src: url('fonts/ITCAvantGardePro-Bk.eot');
+        src: local('☺'), url('fonts/ITCAvantGardePro-Bk.woff') format('woff'), url('fonts/ITCAvantGardePro-Bk.ttf') format('truetype'), url('fonts/ITCAvantGardePro-Bk.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+	*{
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+	p{
+		color: white;
+		display: inline;
+	}
+	#banner{
+		display: block;
+		width: 160px;
+		height: 600px;
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+		border: 1px solid #fff;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		background-color: #000
+	}
+	#exit_click_area{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0px;
+		top: 0px;
+		overflow: hidden;
+		background-image: none;
+		z-index: 4;
+	}
+	.img{
+		position: absolute;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}	
+
+	#logo{
+		left: 0;
+		right: 0;
+		margin: auto;
+		top: 91px;
+	}
+	.logoSmall1{
+		left: 0;
+		right: 0;
+		top: 536px;
+		margin: auto;
+	}	
+	.logoSmall2{
+		left: 0;
+		right: 0;
+		top: 544px;
+		margin: auto;
+	}	
+
+	.textDemi{
+		font-family: 'Demi';
+		text-transform: uppercase;
+	}
+	.textBook{
+		font-family: 'Book';
+		text-transform: uppercase;		
+	}
+
+	.scene1Text{
+		font-size: 19px;
+		letter-spacing: 0.2em;
+		text-align: center;	
+		width: 100%;	
+	}
+	#text1Scene1{
+		top: 79px;
+	}
+	#text2Scene1{
+		top: 101px;
+	}	
+	#text3Scene1{
+		top: 123px;
+	}
+
+	.scene2Text{
+		font-size: 22px;
+		letter-spacing: 0.2em;	
+		text-align: center;	
+		width: 100%;
+	}
+	#text1Scene2{
+		top: 79px;
+	}	
+	#text2Scene2{
+		top: 106px;
+	}
+
+	.scene3Text{
+		text-align: center;	
+		width: 100%;
+	}		
+	#text2Scene3{
+		top: 83px;
+		font-size: 14px;
+		letter-spacing: 0.2em;
+	}	
+	#text3Scene3{
+		top: 100px;
+		font-size: 14px;
+		letter-spacing: 0.2em;
+	}	
+	#text4Scene3{
+		top: 117px;
+		font-size: 14px;
+		letter-spacing: 0.2em;
+	}	
+	#text5Scene3{
+		top: 231px;
+		font-size: 20px;
+		letter-spacing: 0.2em;
+	}	
+	#text6Scene3{
+		top: 256px;
+		font-size: 20px;
+		letter-spacing: 0.2em;
+	}		
+
+	#cta{
+		width: 126px;
+		height: 35px;
+		border: 1px solid white;
+		box-sizing: border-box;
+		top: 451px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		text-align: center;
+		font-family: 'GothicBold';
+		font-size: 11px;
+		line-height: 35px;
+	}
+	#scene1, #scene2, #scene3, #scene4{
+		position: relative;
+	}
+	</style>
+	
+</head>
+<body>
+	<div id="banner">
+		<a href="javascript:window.open(window.clickTag)">
+			<div id="exit_click_area"></div>
+			<div id="scene1">
+	        	<video id="video1" src="assets/video_160x600.mp4" muted="yes" class="img"></video>
+				<img src="assets/logo_small.png" alt="" class="img logoSmall1">
+	        	<p id="text1Scene1" class="img textDemi scene1Text">step out</p>
+	        	<p id="text2Scene1" class="img textDemi scene1Text">of the</p>
+	        	<p id="text3Scene1" class="img textDemi scene1Text">ordinary</p>
+			</div>			
+			<div id="scene2">
+				<img src="assets/bg2.jpg" class="img">
+				<img src="assets/logo_small.png" alt="" class="img logoSmall1">
+	        	<p id="text1Scene2" class="img textDemi scene2Text">ecco</p>
+	        	<p id="text2Scene2" class="img textDemi scene2Text">s-drive</p>
+			</div>			
+			<div id="scene3">
+				<img src="assets/bg3.jpg" class="img">
+				<img src="assets/logo_small.png" alt="" class="img logoSmall2">
+	        	<p id="text2Scene3" class="img textBook scene3Text">ecco</p>
+	        	<p id="text3Scene3" class="img textBook scene3Text">golf</p>
+	        	<p id="text4Scene3" class="img textBook scene3Text">ambassador</p>
+	        	<p id="text5Scene3" class="img textDemi scene3Text">smylie</p>
+	        	<p id="text6Scene3" class="img textDemi scene3Text">kaufman</p>
+			</div>			
+			<div id="scene4">
+				<img src="assets/bg4.jpg" class="img">
+				<img src="assets/logo.png" id="logo" alt="" class="img">
+				<div id="cta" class="img">
+					<p id="ctaText">View Collection</p>
+				</div>
+			</div>
+		</a>
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+	
+</body>
+</html>

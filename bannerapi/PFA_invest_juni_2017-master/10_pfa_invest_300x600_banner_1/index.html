@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		300 x 600
+	</title>
+	<meta name="ad.size" content="width=300,height=600">
+	<script type="text/javascript">
+		var clickTag = "http://www.google.com"; 
+	</script>
+	<script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<style type="text/css">
+
+	*{
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+	#banner{
+		display: block;
+		width: 300px;
+		height: 600px;
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+		border: 1px solid #cccccc;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		background-color:#000
+	}
+	#exit_click_area{
+		position: absolute;
+		z-index: 100;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		cursor: pointer;
+	}
+	.img{
+		position: absolute;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	#person{
+		top: 0px;
+		left: 0;
+	}
+
+	#logo{
+	    top: 25px;
+	    left: 30px;
+	    width: 29%;
+
+	}
+
+	#cta{
+		position: absolute;
+	    left: 38px;
+	    margin:0 auto;
+    	bottom: 58px;
+		background-color: #990033;
+		width: 192px;
+		height: 50px;
+		border-radius: 25px;
+		text-align: center;
+	 	-webkit-backface-visibility: hidden;
+  		-webkit-transform: translateZ(0) scale(1.0, 1.0);
+	}
+
+	#cta_text{
+		position: relative;
+	    top: 17px;
+	}
+
+	#arrow{
+		position: relative;
+	    top: 15px;
+   		left: 5px;
+	}
+
+	#t1{
+		top: 208px;
+    	left: 25px;
+	}
+
+	#t2{
+		top: 208px;
+    	left: 25px;
+	}
+
+	#line{
+	    top: 374px;
+    	left: 38px;
+	}
+
+	#name{
+		top: 392px;
+    	left: 38px;
+	}
+
+	</style>
+</head>
+<body>
+	<div id="banner">
+			<a href="javascript:window.open(window.clickTag)">
+					<div id="exit_click_area"></div>
+		
+				</a>
+		<img id="person" class="img" src="assets/person.png"></img>
+		<img id="logo" class="img" src="assets/logo.png"></img>
+		<div id="cta">
+			<img id="cta_text" src="assets/cta_text.png"></img>
+			<img id="arrow" src="assets/arrow.png"></img>
+		</div>
+		<img id="t1" class="img" src="assets/t1.png"></img>
+		<img id="t2" class="img" src="assets/t2.png"></img>
+		<img id="line" class="img" src="assets/line.png"></img>
+		<img id="name" class="img" src="assets/name.png"></img>
+
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+	
+</body>
+</html>

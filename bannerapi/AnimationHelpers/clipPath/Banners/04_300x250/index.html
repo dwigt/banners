@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		300 x 250
+	</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://track.adform.net/serving/scripts/trackpoint/" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script src="http://s1.adform.net/banners/scripts/mobile/autoplay.js"></script>
+	<script src="mraid.js"></script>
+	<style type="text/css">
+
+	*{
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+	#banner{
+		display: block;
+		width: 300px;
+		height: 250px;
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+		border: 1px solid #cccccc;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+		background-color: #000000;
+	}
+	#exit_click_area{
+		position: absolute;
+		z-index: 100;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		cursor: pointer;
+	}
+	.img{
+		position: absolute;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	#text_container{
+		height: 80px;
+		width: 300px;
+		display: flex;
+		justify-content: center;
+		position:absolute;
+		flex-direction: column;
+		bottom: 86px;
+    	right: -16px;
+	}
+
+	#clip_box_text1_1{
+		position:relative;
+		width: 271px;
+		height: 15px;
+		background-color:transparent;
+		z-index: 3;
+	}
+	#text1_1{
+		width:100%;
+		height:100%;	
+		clip:rect(0px 271px 15px 0px);
+	}
+	#clip_box_text1_2{
+		position:relative;
+		width: 232px;
+		height: 19px;
+		background-color:transparent;
+		z-index: 3;
+		top: 5px;
+	}
+	#text1_2{
+		width:100%;
+		height:100%;	
+		clip:rect(0px 232px 19px 0px);		
+	}
+
+	#clip_box_text2_1{
+		position:relative;
+		width: 142px;
+		height: 13px;
+		background-color:transparent;
+		z-index: 3;
+		top: 10px;
+	}
+	#text2_1{
+		width:100%;
+		height:100%;	
+		clip:rect(0px 142px 13px 0px);		
+	}
+
+	#logo{
+		top: 15px;
+		right: 15px;
+	}
+
+	.cta{
+	    width: 93px;
+	    height: 28px;
+	    position: relative;
+	    left: 14px;
+	    bottom: 100px;
+	    border: 3px solid white;
+		transition: background-color 0.3s ease-in-out;
+	}
+
+	#exit_click_area:hover ~ .cta{
+		background-color:white;
+	}
+
+	.cta-text{
+		position: absolute;
+	    right: 20px;
+    	top: 9px;
+	}
+
+	#cta_orange{
+		opacity:0;
+	}
+
+	</style>
+</head>
+<body>
+	<div id="banner">
+		<div id="exit_click_area"></div>
+		<video muted width="300" height="250" autoplay id="video" poster="assets/fallback.png">
+			<source src="assets/video.mpg" type="video/mpg">
+			<source src="assets/video.mp4" type="video/mp4">
+		</video>
+		<div id="text_container">
+			<div id="clip_box_text1_1">
+				<img src="assets/text1_1.png" id="text1_1" class="img">
+			</div>
+
+			<div id="clip_box_text1_2">
+				<img src="assets/text1_2.png" id="text1_2" class="img">
+			</div>
+		</div>
+		<div class="cta">
+			<img src="assets/cta.png" id="cta_white"  class="img cta-text">
+			<img src="assets/cta_orange.png" id="cta_orange" class="img cta-text">
+		</div>
+		<img src="assets/logo.png" id="logo" class="img">
+
+	</div>
+
+	<script type="text/javascript" src="assets/script.js"></script>
+	
+</body>
+</html>

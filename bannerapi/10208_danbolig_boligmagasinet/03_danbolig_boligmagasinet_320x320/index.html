@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>
+		320 x 320
+	</title>
+	<meta name="ad.size" content="width=320,height=320">
+	<script type="text/javascript">
+		var clickTag = "http://www.google.com"; 
+	</script>
+	<script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<style type="text/css">
+
+	*{
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+	.img{
+		position: absolute;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	#banner{
+		display: block;
+		width: 318px;
+		height: 318px;
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+		border: 1px solid #fff;
+
+	}
+	#bg{
+		top:0px;
+		left:0px;
+		position:  absolute;
+		background-size: contain;
+		background-repeat: no-repeat;
+	    -ms-transform: rotate(0.01deg); /* IE 9 */
+	    -webkit-transform: rotate(0.01deg); /* Chrome, Safari, Opera */
+	    transform: rotate(0.01deg);
+	}
+	#bggreen{
+		position:absolute;
+		top: 229px;
+	    width: 320px;
+	    height: 90px;
+	    background-color:#004043;
+	    left: 0px;	}
+
+	#splash{
+		position:absolute;
+		left: 385px;
+		top: -91px;
+		width: 400px;
+		height: 400px;
+		-webkit-backface-visibility: hidden;
+		-webkit-transform: translateZ(0) scale(1.0, 1.0);   
+	}
+	#txt1{
+		position:absolute;
+		left: 67px;
+		top: 93px;
+	}
+	#txt2{
+		position:absolute;
+		left: 48px;
+		top: 73px;
+	}
+
+	#btn{
+		position:absolute;
+		left: 20px;
+		top: 255px;
+		width: 120px;
+		height: 40px;
+		background-color: #2c978f;
+		border-radius: 3px;
+		z-index: 5;
+	}
+	#btn:hover{
+		position: absolute;
+		background-color:#1b5c57;
+
+	}
+	#logo{
+		position:absolute;
+		left: 171px;
+		top: 255px;
+		width: 119px;
+	}
+	#cta	{
+		position:  absolute;
+		width: 65px;
+		top:15px;
+		left:28px;
+	}
+
+
+	#breaker {
+		background-color:#004043;
+		width: 100%;
+		height: 100%;
+	}
+	</style>
+	
+</head>
+<body>
+	<div id="banner">
+		<a href="javascript:window.open(window.clickTag)">
+	
+			<img id="bg" 	 class="img"	src="assets/bg.jpg">
+			<div id="bggreen"  class="img"></div>
+			<div id="breaker" 	 class="img"></div>
+			<img id="txt1" 	  class="img"	src="assets/txt1.png">
+			<img id="txt2" 	  class="img"	src="assets/txt2.png">
+			<div id="btn"  class="img">
+				<img id="cta"  class="img" 	src="assets/cta.png"/>
+			</div>	
+			<img id="logo"   class="img"	src="assets/logo.png">
+		</a>
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>

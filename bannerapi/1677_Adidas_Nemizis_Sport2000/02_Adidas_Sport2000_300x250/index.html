@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>
+		300 x 250
+	</title>
+	<meta name="ad.size" content="width=930,height=180">
+	<script type="text/javascript">
+		var clickTag = "http://www.google.com";
+	</script>
+	<script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<style type="text/css">
+
+	*{
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+	#banner{
+		display: block;
+		width: 300px;
+		height: 250px;
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+		border: 1px solid #cccccc;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		background-color: #000000;
+	}
+	#exit_click_area{
+		position: absolute;
+		width: 300px;
+		height: 250px;
+		top: 0px;
+		left: 0px;
+		overflow: hidden;
+		background-image: none;
+		z-index: 100;
+	}
+	.img{
+		position: absolute;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	#bg {
+		top: 0px;
+		left: 0px;
+	}
+
+	#messi {
+		left: 137px;
+		top: 89px;
+	}
+
+	#sko1 {
+		left: 40px;
+		top: 172px;
+	}
+
+	#sko2 {
+		left: 50px;
+		top: 96px;
+	}
+
+	#wave1 {
+		left: 12px;
+		top: 110px;
+	}
+
+	#txt1 {
+		left: 53px;
+		top: 16px;
+	}
+	
+	#txt2 {
+		left: 24px;
+		top: 16px;
+	}
+
+
+	#logo {
+		left: 14px;
+		top: 15px;
+	}
+
+	#btn{
+		left: 186px;
+		top: 37px;
+	}
+
+	#btn img {
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateZ(0) scale(1.0, 1.0);   
+	backface-visibility: hidden;
+	transform: translateZ(0) scale(1.0, 1.0);
+	}
+
+	#svg-mask-container{
+		position:absolute;
+		left: 11px;
+		top: 109px;
+	}
+
+
+
+	</style>
+</head>
+<body>
+	<div id="banner">
+		<a href="javascript:window.open(window.clickTag)">
+			<div id="exit_click_area"></div>
+		</a>
+		<div id="bg" class="img"><img src="images/bg.jpg"></div>
+		<svg height="113" viewBox="0 0 220 118" id="svg-mask-container" preserveAspectRatio="xMidYMid meet">
+			<defs>
+				
+				<path id="svgMask2" d="M31.8 57 11.5 78.9 82.4 113.5 132.1 113.5 132.1 100.9 31.8 57z"/>
+				<path id="svgMask3" d="M31.8,57,16,29S-3.5,28.3,2,68.8l9.5,10.2,70.9,34.6h49.8V100.9Z"/>
+				<path id="svgMask4" d="M186.5,71.8,34.5,26.3S4.8,26,4,33.5s-9.5,43.6,7.5,45.4l70.9,34.6h49.8V100.9L31.8,57l154.8,46Z" />
+				<path id="svgMask5" d="M207,48.3,182,32,167.3,57l29.5,14.2H186.5L16,29S-3.5,28.3,2,68.8l9.5,10.2,70.9,34.6h49.8V100.9L31.8,57l154.8,45.3,20.5.5C228.3,71.5,207,48.3,207,48.3Z" />
+				<path id="svgMask6" d="M207,48.3,182,32,105.8.5H61.3L167.3,57l29.5,14.2H186.5L16,29S-3.5,28.3,2,68.8l9.5,10.2,70.9,34.6h49.8V100.9L31.8,57l154.8,45.3,20.5.5C228.3,71.5,207,48.3,207,48.3Z" />
+				
+
+			
+			<clipPath id="clipPath">	
+				<path id="svgMask1" d="M132.1 100.9 82.4 113.5 132.1 113.5 132.1 100.9z"/>
+			</clipPath>
+			</defs>
+			<image id="svg-mask-image" clip-path="url(#clipPath)" width="216" height="113" y="0" x="0" xlink:href="images/wave1.png" />
+		</svg>
+		<div id="sko1" class="img"><img src="images/sko1.png"></div>
+		<div id="sko2" class="img"><img src="images/sko2.png"></div>
+		<div id="messi" class="img"><img src="images/messi.png"></div>
+		<div id="btn" class="img"><img src="images/btn.png"></div>
+		<div id="txt1" class="img"><img src="images/txt1.png"></div>
+		<div id="txt2" class="img"><img src="images/txt2.png"></div>
+		<div id="logo" class="img"><img src="images/logo.png"></div>
+
+
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="morphsvg.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+.App {
+    text-align: center;
+}
+
+.App {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+iframe {
+    border: 0;
+    margin-top: 36px;
+}
+
+iframe:last-child {
+    border: 0;
+    margin-bottom: 36px;
+}
+
+.unloaded {
+    visibility: hidden;
+}

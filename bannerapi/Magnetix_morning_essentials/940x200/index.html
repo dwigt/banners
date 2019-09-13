@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<title>
+		940x200
+	</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/AttrPlugin.min.js"></script>
+	
+	<style type="text/css">
+
+	*{
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+	#banner{
+		display: block;
+		width: 940px;
+		height: 200px;
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+		border: 1px solid #cccccc;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		background-color: #FFFFFF;
+	}
+	#exit_click_area{
+		position: absolute;
+		width: 940px;
+		height: 200px;
+		left: 0px;
+		top: 0px;
+		overflow: hidden;
+		background-image: none;
+		z-index: 100;
+	}
+	.img{
+		position: absolute;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	
+	#logo{
+		left: 756px;
+		top: 138px;
+	}
+	#light1{
+		top: 60px;
+		left: 814px;
+	}	
+
+	#vr1, #vr2, #vr3 {
+		left: 440px;
+		top: 3px;
+	}
+
+	#text1 {
+		left: 50px;
+		top: 39px;
+	}
+	#text1_1 {
+		left: 49px;
+		top: 76px;
+	}
+
+	#text2 {
+		left: 50px;
+		top: 39px;
+	}
+	#text2_1 {
+		left: 48px;
+		top: 74px;
+	}
+	#text3 {
+		left: 50px;
+		top: 39px;
+	}
+	#text3_1 {
+		left: 48px;
+		top: 74px;
+	}
+	#bg {
+		left: 0px;
+		top: 0px;
+	}
+	#btn {
+		left: 50px;
+		top: 125px;
+	}
+
+
+	</style>
+</head>
+<body>
+	<div id="banner">
+		<a href="javascript:followClickTag()"">
+			<div id="exit_click_area"></div>
+
+			<img src="assets/bg.jpg" id="bg" class="img">
+
+			<img src="assets/vr.png" id="vr1" class="img">
+			
+			<img src="assets/vr.png" id="vr3" class="img">
+			<img src="assets/text1.png" id="text1" class="img">  
+
+
+			<img src="assets/text2.png" id="text2" class="img">  
+
+
+
+			<img src="assets/text3.png" id="text3" class="img"> 
+			<img src="assets/text3_1.png" id="text3_1" class="img"> 
+
+
+            <img src="assets/logo.png" id="logo" class="img">  
+
+            <img src="assets/btn.png" id="btn" class="img">  
+
+		</a>
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+    <script>
+    /**
+    * clickTAG is the url which counts the click, if left as is it will redirect to
+    * the url which is configured int the system as the destination. The redirect
+    * can be temporarily changed to a diffrent url by appending it
+    */
+    // get the click url from the query string
+    var clickTag = document.location.search.replace(/^.*clickTAG=(.*)$/, '$1');
+
+    function followClickTag() {
+        // count the click and go to a custom destination url
+        // var custom = 'https://www.magnetix.dk/nyheder/morning-essentials-machine-learning/';
+        // window.open(clickTag + custom, '_blank');
+        // or using default 
+        window.open(clickTag, '_blank')
+    }
+    </script>   
+</body>
+</html>

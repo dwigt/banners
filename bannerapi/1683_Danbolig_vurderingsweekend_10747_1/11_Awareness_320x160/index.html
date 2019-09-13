@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>
+		320 x 160
+	</title>
+	<meta name="ad.size" content="width=320,height=160">
+	<script type="text/javascript">
+		var clickTag = "http://www.google.com"; 
+	</script>
+	<script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<style type="text/css">
+
+	*{
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+	#banner{
+		display: block;
+		width: 320px;
+		height: 160px;
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+		border: 1px solid #fff;
+	}
+	#bg{
+		top: -45px;
+		left:0px;
+		position:  absolute;
+		background-size: contain;
+		background-repeat: no-repeat;
+	    -ms-transform: rotate(0.01deg); /* IE 9 */
+	    -webkit-transform: rotate(0.01deg); /* Chrome, Safari, Opera */
+	    transform: rotate(0.01deg);
+	}
+	#bggreen{
+		position:absolute;
+		top:100px;
+		width:320px;
+		height:60px;
+		background-color:#004043; 
+	}
+	#logo{
+		position:absolute;
+		width: 80px;
+		left: 213px;
+		top: 125px;
+	}
+	#splash{
+		position:absolute;
+		left: 58px;
+	    top: -14px;
+	    width: 200px;
+	    height: 200px;
+	    -webkit-backface-visibility: hidden;
+		-webkit-transform: translateZ(0) scale(1.0, 1.0);   
+	}
+	#t1{
+		position:absolute;
+		left: 63px;
+		top: 33px;
+	}
+	#t2{
+		position:absolute;
+		left:33px;
+		top:33px;
+	}
+	#btn{
+		position:absolute;
+		left: 20px;
+		top: 114px;
+		width: 120px;
+		height: 30px;
+		background-color: #2c978f;
+		border-radius: 3px;
+		z-index: 5;
+	}
+	#btn:hover{
+		position: absolute;
+		background-color:#1b5c57;
+	}
+	#t3	{
+		position:  absolute;
+		width: 100px;
+		top:10px;
+		left:10px;
+	}
+	</style>
+	
+</head>
+<body>
+	<div id="banner">
+		<a href="javascript:window.open(window.clickTag)">
+			<img id="bg" 		src="assets/bg1.jpg">
+			<div id="bggreen"></div>
+			<img id="logo" 		src="assets/logo.png">
+			<img id="t1"		src="assets/t1.png">
+			<img id="t2"		src="assets/t2.png">
+			<img id="splash"	src="assets/splash.png">
+
+			<div id="btn">
+				<img id="t3" 	src="assets/t3.png">
+			</div>	
+		</a>
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
