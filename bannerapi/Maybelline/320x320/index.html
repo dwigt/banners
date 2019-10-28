@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>320x320</title>
+	<meta name="ad.size" content="width=320,height=320">
+	<script type="text/javascript">
+		var clickTag = "http://www.google.com"; 
+	</script>
+	<script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			border: none;
+		}
+
+		#banner {
+			display: block;
+			width: 320px;
+			height: 320px;
+			position: relative;
+			overflow: hidden;
+			cursor: pointer;
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			background-color: #fff;
+		}
+
+		#border {
+			top: 0;
+			left: 0;
+			width: calc(100% - 2px);
+			height: calc(100% - 2px);
+			border: 1px solid #000;
+		}
+
+		#exit_click_area {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0px;
+			top: 0px;
+			overflow: hidden;
+			background-image: none;
+			z-index: 4;
+		}
+
+		.img {
+			position: absolute;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		#bg {
+			top: 4px;
+			left: 4px;
+		}
+
+		/* Plus width of text_clipMask offset */
+		#lash_logo  {
+			left: 26px;
+			top: 38px;
+		}
+		#lash_logo2 {
+			left: 28px;
+			top: 38px;
+		}
+		#mbl_logo {
+			left: 153px;
+			top: 266px;
+		}
+		#ribbon {
+			top: 0;
+			right: 0;
+		}
+		#brush {
+			top: 81px;
+			left: 120px;
+		}
+
+		/* clipped text left is: plus width of text_clipMask offset */
+		#t1l1 {
+			left: 826px;
+			top: 517px;
+		}		
+		#t1l2 {
+			left: 826px;
+			top: 546px;
+		}
+		#t2l1 {
+			left: 26px;
+			top: 30px;
+		}
+		#t2l2 {
+			left: 26px;
+			top: 59px;
+		}
+		/* Left is width minus brushhandle */
+		#text_clipMask {
+			width: 1000px;
+			height: 1000px;
+			left: -800px;
+			top: -400px;
+			overflow: hidden;
+		}
+		#text_wrapper {
+			width: 1000px;
+			height: 1000px;
+			left: 0px;
+			top: 0px;
+		}
+		/* bottom is height minus banner height. Left is brush_handle */
+		#flower_clipMask {
+			width: 600px;
+			height: 600px;
+			left: 57px;
+			bottom: 280px;
+			transform: rotate(90deg);
+			overflow: hidden;
+			position: relative;
+		}
+		#flower_wrapper {
+			width: 600px;
+			height: 600px;
+			top: 0px
+		}
+		#flower_wrapper img {
+			bottom: 0;
+		}
+		#brush {
+			left: 81px;
+			top: 120px;
+		}
+
+		#pink_brush {
+			left: 78px;
+			top: 86px;
+		}
+		#cta {
+			width: 106px;
+			height: 34px;
+			left: 28px;
+			top: 97px;
+			background: #fff;
+		}
+		#ctatxt {
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div id="banner">
+	<a href="javascript:window.open(window.clickTag)" id="exit_click_area"></a>
+	<img id="bg" class="img" src="assets/bg.jpg">
+	<img id="lash_logo" class="img" src="assets/lash_logo.png">
+
+	<div id="text_clipMask" class="img">
+		<div id="text_wrapper" class="img">
+			<img id="t1l1" class="img" src="assets/t1l1.png">	
+			<img id="t1l2" class="img" src="assets/t1l2.png">	
+		</div>
+	</div>
+	<img id="ribbon" class="img" src="assets/ribbon.png">
+	<div id="flower_clipMask" class="img">
+		<div id="flower_wrapper" class="img">
+			<img id="flower" class="img" src="assets/flower.png">
+		</div>
+
+	</div>
+	<img id="pink_brush" class="img" src="assets/pink_brush.png">	
+
+	<img id="brush" class="img" src="assets/brush.png">
+	<img id="mbl_logo" class="img" src="assets/mbl_logo.png">
+	<img id="t2l1" class="img" src="assets/t2l1.png">	
+	<img id="t2l2" class="img" src="assets/t2l2.png">		
+	<div id="cta" class="img">
+		<img id="ctatxt" src="assets/ctatxt.png" class="img">
+	</div>
+	<div id="border" class="img"></div>
+</div>
+	<script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>
