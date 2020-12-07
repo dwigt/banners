@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" >
+<meta name="ad.size" content="width=320,height=250" />
+<title>320 x 250</title>
+<script type="text/javascript">
+	var clickTag = "http://www.google.com";
+</script>
+	<script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+	#banner{
+		display: block;
+		width: 320px;
+		height: 250px;
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+		border: 1px solid #76b82a;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		background-color: #FFFFFF;
+	}
+	#exit_click_area{
+		position: absolute;
+		width: 320px;
+		height: 250px;
+		left: 0px;
+		top: 0px;
+		overflow: hidden;
+		background-image: none;
+		z-index: 100;
+	}
+	.img{
+		position: absolute;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	#scene1 {	
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	}
+
+	#scene2{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	}
+
+	#scene3{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+	}
+
+	.img{
+	position: absolute;
+	}
+
+	#frame {
+		left: 1px;
+		top: 1px;
+		z-index:6;
+	}
+	#img1 {
+		left: 43px;
+		top: 73px;
+	}
+
+	#img2{
+		left: 36px;
+		top: 81px;
+	}
+
+	#img3{
+		left: 45px;
+		top: 88px;
+	}
+	
+	#img1 #img2 #img3 {
+		-webkit-backface-visibility: hidden;
+        -webkit-transform: translateZ(0) scale(1.0, 1.0);   
+		backface-visibility: hidden;
+        transform: translateZ(0) scale(1.0, 1.0);
+	}
+
+	#txt1 {
+		left: 112px;
+		top: 20px;
+	}
+	
+	#txt2 {
+		left: 96px;
+		top: 20px;
+	}
+
+	#txt3 {
+		left: 19px;
+		top: 20px;
+	}
+
+	#btn {
+		left: 88px;
+		top: 196px;
+	}
+
+	#logo {
+		left: -4px;
+		top: -15px;
+	}
+	#bg {
+		left: 0px;
+		top: 0px;
+	}
+
+
+</style>
+</head>
+<body>
+<div id="banner" class="">
+
+	<a href="javascript:window.open(window.clickTag)">
+				<div id="exit_click_area"></div>
+	</a>
+	
+	<div id="bg" class="img"><img src="images/bg.png"></div>
+	<div id="logo" class="img"><img src="images/logo.png"></div>
+
+	<div id="scene1">	
+		<div id="img1" class="img"><img src="images/img1.png"></div>
+		<div id="txt1" class="img"><img src="images/txt1.png"></div>
+
+	</div>
+	<div id="scene2">
+		<div id="img2" class="img"><img src="images/img2.png"></div>
+		<div id="txt2" class="img"><img src="images/txt2.png"></div>
+	</div>
+	<div id="scene3">
+		<div id="img3" class="img"><img src="images/img3.png"></div>
+		<div id="txt3" class="img"><img src="images/txt3.png"></div>
+		<div id="btn" class="img"><img src="images/btn.png"></div>
+	</div>
+
+	
+</div>
+
+<script type="text/javascript">
+
+	// return GET paramaters in a JS Object (QueryString)
+	var QueryString = function () {
+		var query_string = {};
+		var query = window.location.href.split("#")[1] || "";
+		var vars = query.split("&");
+		for (var i=0;i<vars.length;i++) {
+			var pair = vars[i].split("=");
+			// If first entry with this name
+			if (typeof query_string[pair[0]] === "undefined") {
+				query_string[pair[0]] = pair[1];
+			// If second entry with this name
+			} else if (typeof query_string[pair[0]] === "string") {
+				var arr = [ query_string[pair[0]], pair[1] ];
+				query_string[pair[0]] = arr;
+				// If third or later entry with this name
+			} else {
+				query_string[pair[0]].push(pair[1]);
+			}
+		}
+		return query_string;
+	}();
+
+
+	var banner = $("#full_banner");
+	var logo = $("#logo");
+	var img1 = $("#img1");
+	var img2 = $("#img2");
+	var img3 = $("#img3");
+	var txt1 = $("#txt1");
+	var txt2 = $("#txt2");
+	var txt3 = $("#txt3");
+	var scene1 = $("#scene1");
+	var scene2 = $("#scene2");
+	var scene3 = $("#scene3");
+	
+	TweenMax.set(banner, {alpha:0});
+
+	$(document).ready(function(){
+		
+		var loop 			= 0;
+		var max_loop 		= 3;
+
+		var scene1;
+		var scene2;
+		var scene3;
+		
+		function next_scene(scene){
+			if(scene == 1){
+			animate_scene2();
+			}if(scene == 2){
+			animate_scene3();
+			}else if(scene == 3) {
+			reset_banner();
+			animate_scene1();
+			}
+		}
+
+		var bannerElements = [
+		img1,
+		img2,
+		img3,
+		txt1,
+		txt2,
+		txt3,
+		logo,
+		btn
+		];
+
+		reset_banner();
+
+		function animate_scene1( next ){
+			TweenMax.set(banner, {alpha:1});
+			TweenMax.set($("#scene1"), {alpha:1});
+			TweenMax.set($("#scene2"), {alpha:0});
+			TweenMax.set($("#scene3"), {alpha:0});
+			loop++;
+
+			scene1 = new TimelineMax({delay:0});
+
+			scene1
+				.from(logo, 1, {alpha:0,ease: Back.easeOut.config(1)}, "scene1+=0")
+				.from(txt1, 1, {alpha:0,ease: Back.easeOut.config(1)}, "scene1+=0")
+				.from(img1, 1, {scale:0, ease: Elastic.easeOut.config(1, 1)}, "scene1+=0.2")
+				.to(img1, 0.5, {scale:0,ease: Back.easeIn.config(1)}, "scene1+=1.5")
+				.to(txt1, 0.5, {alpha:0,ease: Back.easeIn.config(1)}, "scene1+=1.5")
+				if(!next){
+					scene1.set(banner, {delay:0});
+					scene1
+			;
+					scene1.set(banner, {delay:0, onComplete:next_scene, onCompleteParams:[1]}, "end");
+			}
+		}
+
+		function animate_scene2( next ){
+			TweenMax.set(banner, {alpha:1});
+			TweenMax.set($("#scene2"), {alpha:1});
+			TweenMax.set($("#scene1"), {alpha:0});
+			TweenMax.set($("#scene3"), {alpha:0});
+
+
+			scene2 = new TimelineMax({delay:0});
+			scene2
+				.from(txt2, 1, {alpha:0,ease: Back.easeOut.config(1)}, "scene2+=0")
+				.from(img2, 1, {scale:0,ease: Elastic.easeOut.config(1, 1)}, "scene2+=0.2")
+				.to(img2, 0.5, {scale:0,ease: Back.easeIn.config(1)}, "scene2+=1.5")
+				.to(txt2, 0.5, {alpha:0,ease: Back.easeIn.config(1)}, "scene2+=1.5")
+				.to(logo, 0.5, {alpha:0,ease: Back.easeOut.config(1)}, "scene2+=1.5")
+			
+
+				if(!next){
+				scene2.set(banner, {delay:0});
+				scene2
+					scene2.set(banner, {delay:0, onComplete:next_scene, onCompleteParams:[2]}, "end")
+				;
+			}
+
+		}
+
+			function animate_scene3( next ){
+			TweenMax.set(banner, {alpha:1});
+			TweenMax.set($("#scene3"), {alpha:1});
+			TweenMax.set($("#scene1"), {alpha:0});
+			TweenMax.set($("#scene2"), {alpha:0});
+
+
+			scene3 = new TimelineMax({delay:0});
+			scene3
+
+				.from(txt3, 1, {alpha:0,ease: Back.easeOut.config(1)}, "scene3+=0")
+				.from(img3, 1, {scale:0,ease: Elastic.easeOut.config(1, 1)}, "scene3+=0.2")
+				.from(btn, 1, {alpha:0,ease: Back.easeOut.config(1)}, "scene3+=0.2")
+				
+			
+				if(!next && loop < max_loop){
+				scene3.set(banner, {delay:0});
+				scene3
+					.to(img3, 0.5, {scale:0,ease: Back.easeIn.config(1)}, "scene3+=3")
+					.to(txt3, 0.5, {alpha:0,ease: Back.easeIn.config(1)}, "scene3+=3")
+					.to(btn, 0.5, {alpha:0,ease: Back.easeIn.config(1)}, "scene3+=3")
+					scene3.set(banner, {delay:0, onComplete:next_scene, onCompleteParams:[3]}, "end")
+				;
+			}
+
+		}
+		
+
+		//here you pass the blur filter to the DOM element
+		function reset_banner(){
+			var bl = bannerElements.length;
+			for (var i=0;i<bl;++i){
+				TweenMax.killTweensOf(bannerElements[i]);
+				TweenMax.set(bannerElements[i], {scaleX:1,scaleY:1,alpha:1,x:0,y:0});
+			}	
+		
+
+		}
+
+		if (typeof QueryString.tag !== "undefined"){
+			if( QueryString.tag != "" ) {
+				document.getElementById("clickTAG").href = decodeURIComponent(QueryString.tag) + document.getElementById("clickTAG").href;
+			}
+		}
+
+		if (typeof QueryString.debug !== "undefined"){
+			if (typeof QueryString.scene !== "undefined") {
+				if( QueryString.scene == 1 ) {
+					animate_scene1(true);
+				}if( QueryString.scene == 2 ) {
+					animate_scene2(true);
+				} else {
+					animate_scene3(true);
+				}
+			} else {
+				setTimeout(function(){animate_scene1();},10);
+			}
+		} else {
+			setTimeout(function(){animate_scene1();},10);
+		}
+	});
+
+</script>
+</body>
+</html>

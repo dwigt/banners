@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+
+.center {
+  margin: auto;
+}
+
+.wrapper {
+  margin: auto;
+  position: relative;
+}
+
+.max-1260 {
+  height: 1440px;
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-image: url("Video/preview.jpg")
+}
+
+body {
+  margin: 0;
+}
+
+body{
+  text-transform: uppercase;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h2 {
+	display: block;
+}
+
+.wallpaper-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.page-wrapper {
+  margin: 0px auto;
+  position: relative;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+}

@@ -1,0 +1,19 @@
+{
+    "version": "1.0",
+
+    "title": "930 x 180", 
+
+    "width" : "930", 
+    "height": "180", 
+
+    "events": {
+        "enabled": 1, 
+        "list": { }
+    },
+
+    "clicktags": {
+        "clickTAG1": "http://www.example.com"
+    },
+
+    "source": "index.html"
+}

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>300x250</title>
+    <meta name="ad.size" content="width=300,height=250" />
+    <script type="text/javascript">
+      var clickTag = "http://www.google.com";
+    </script>
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.5.1_min.js"></script>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        border: none;
+      }
+      #banner {
+        display: block;
+        width: 300px;
+        height: 250px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        background-color: #85dadf;
+      }
+      #exit_click_area {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+        overflow: hidden;
+        background-image: none;
+        z-index: 4;
+      }
+      .img {
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .logo_container {
+        width: 100%;
+        height: 80px;
+        background-color: #006664;
+        right: 0;
+        bottom: 0;
+      }
+      .cta_container {
+        width: 133px;
+        height: 35px;
+        border-radius: 6px;
+        bottom: 22px;
+        left: 23px;
+        margin: 0 auto;
+        background-color: #2c978f;
+      }
+      .ctatxt {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 56px;
+      }
+      .logo {
+        width: 100px;
+        right: 23px;
+        margin: 0 auto;
+        bottom: 22px;
+      }
+      .t1 {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 36px;
+      }
+      .like1,
+      .like2 {
+        left: 40px;
+        top: 40px;
+      }
+     
+      .house {
+        position: absolute;
+        width: 93px;
+      }
+      .house1 {
+        left: -28px;
+        top: 73px;
+      }
+      .house2 {
+        left: 17px;
+        top: -12px;
+      }
+      .house3 {
+        left: 154px;
+        top: 120px;
+      }
+      .house4 {
+        left: 232px;
+        top: 7px;
+      }
+      .house5 {
+        left: 256px;
+        top: 94px;
+      }
+      /* .house6 {
+        left: 402px;
+        top: 100px;
+      }
+      .house7 {
+        left: -28px;
+        top: 39px;
+      } */
+      .star-pulse {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background-color: rgba(136, 219,200, 0.8);
+      }
+
+      .star-pulse1{
+        left: 76px;
+        top: 15px;
+      }
+      .star-pulse2 {
+        left: 226px;
+        top: 39px;
+      }
+      .star-pulse3 {
+        left: 151px;
+        top: 108px;
+      }
+
+      .star-pulse-inner {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 25px;
+        height: 25px;
+        background-color: #fff;
+        border-radius: 50%;
+        opacity: 1;
+      }
+
+      .star {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 9px;
+        height: 9px;
+      }
+
+      .t2 {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 36px;
+      }
+      .favorit1 {
+        left: 42px;
+        top: -8px;
+      }
+      .favorit2 {
+        left: 113px;
+        top: 134px;
+      }
+      .favorit3 {
+        left: 289px;
+        top: 145px;
+      }
+      /* .favorit4 {
+        left: 658px;
+        top: 163px;
+      } */
+      .favoritpin1 {
+        left: 0px;
+        top: 1px;
+      }
+      .favoritpin2 {
+        left: 182px;
+        top: 0px;
+      }
+      .favoritpin3 {
+        left: 108px;
+        top: 132px;
+      }
+      .favoritpin4 {
+        left: 224px;
+        top: 73px;
+      }
+      .shape1 {
+        left: 0px;
+        top: 0px;
+      }
+      .shape2 {
+        left: 45px;
+        top: 88px;
+      }
+      .shape3 {
+        right: 0;
+        top: 94px;
+      }
+      .bg3 {
+        width: 100%;
+        height: 100%;
+        background-color: #ffcbc1;
+        top: 0;
+      }
+      .t3 {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 36px;
+      }
+      .phone {
+        top: 39px;
+        left: 27px;
+      }
+      .bg4 {
+        width: 100%;
+        height: 100%;
+        background-color: #004044;
+        top: 0;
+      }
+      .t4 {
+        left: 87px;
+        top: 45px;
+      }
+      .heart {
+        left: 19px;
+        top: 39px;
+        width: 51px;
+      }
+      .appstore {
+        left: 20px;
+        top: 107px;
+      }
+      .overlay {
+        width: 100%;
+        height: 100%;
+        background-color: #006664;
+        position: absolute;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="banner">
+      <a href="javascript:window.open(window.clickTag)">
+        <div id="exit_click_area"></div>
+
+        <div class="scene1">
+          <img class="img t1" src="assets/t1.png" />
+          <div class="houses_container">
+            <img class="house house1" src="assets/hus_1.png" />
+            <img class="house house2" src="assets/hus_2.png" />
+            <img class="house house3" src="assets/hus_3.png" />
+            <img class="house house4" src="assets/hus_4.png" />
+            <img class="house house5" src="assets/hus_5.png" />
+            <!-- <img class="house house6" src="assets/hus_6.png" />
+            <img class="house house7" src="assets/hus_7.png" /> -->
+          </div>
+          <div class="img star-pulse star-pulse1">
+            <div class="img star-pulse-inner star-pulse-inner1">
+              <img class="img star star1_1" src="assets/star1.png" />
+              <img class="img star star1_2" src="assets/star2.png" />
+            </div>
+          </div>
+
+          <div class="img star-pulse star-pulse2">
+            <div class="img star-pulse-inner star-pulse-inner2">
+              <img class="img star star2_1" src="assets/star1.png" />
+              <img class="img star star2_2" src="assets/star2.png" />
+            </div>
+          </div>
+
+          <div class="img star-pulse star-pulse3">
+            <div class="img star-pulse-inner star-pulse-inner3">
+              <img class="img star star3_1" src="assets/star1.png" />
+              <img class="img star star3_2" src="assets/star2.png" />
+            </div>
+          </div>
+        
+        </div>
+
+        <div class="scene2">
+          <img class="img bg2" src="assets/map.jpg" />
+          <img class="img shape1" src="assets/shape1.svg" />
+          <img class="img shape2" src="assets/shape2.svg" />
+          <img class="img shape3" src="assets/shape3.svg" />
+
+          <img class="img t2" src="assets/t2.png" />
+          <img class="img favorit1" src="assets/favorit.png" />
+          <img class="img favorit2" src="assets/favorit.png" />
+          <img class="img favorit3" src="assets/favorit.png" />
+          <!-- <img class="img favorit4" src="assets/favorit.png" /> -->
+
+          <img class="img favoritpin1" src="assets/favoritpin1.png" />
+          <img class="img favoritpin2" src="assets/favoritpin2.png" />
+          <img class="img favoritpin3" src="assets/favoritpin3.png" />
+          <img class="img favoritpin4" src="assets/favoritpin4.png" />
+        </div>
+
+        <div class="scene3">
+          <div class="img bg3"></div>
+          <img class="img t3" src="assets/t3.png" />
+          <img class="img phone" src="assets/phone.png" />
+        </div>
+
+        <div class="scene4">
+          <div class="img bg4"></div>
+          <img class="img heart" src="assets/heart.png" />
+          <img class="img t4" src="assets/t4.png" />
+          <img class="img appstore" src="assets/appstore.png" />
+        </div>
+
+        <div class="img logo_container">
+          <div class="img cta_container">
+            <img class="img ctatxt" src="assets/ctatxt.png" />
+          </div>
+          <img class="img logo" src="assets/logo.png" />
+        </div>
+        <div class="overlay"></div>
+      </a>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

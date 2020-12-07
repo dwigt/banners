@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>320x320</title>
+    <meta name="ad.size" content="width=320,height=320">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://track.adform.net/serving/scripts/trackpoint/" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="https://s1.adform.net/banners/scripts/rmb/Adform.DHTML.js"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+        
+        @font-face {
+            font-family: paypal;
+            src: url(assets/Paytype-Bd.woff);
+            font-weight: bold;
+            font-style: normal;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        #banner {
+            display: block;
+            width: 320px;
+            height: 320px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            background-color: #c1cdba;
+            font-family: paypal;
+            font-size: 31px;
+            line-height: 1.161;
+            font-weight: bold;
+            text-decoration: none;
+        }
+   
+        #border {
+            width: calc(100% - 2px);
+            height: calc(100% - 2px);
+            border: 1px solid #fff;
+        }
+        
+        #exit_click_area {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+            overflow: hidden;
+            background-image: none;
+            z-index: 4;
+        }
+        
+        .img {
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+       
+        #t1 {
+            text-align:center;
+            top: 55px;
+            color: #5a78ff;
+            width: 100%;
+        }
+
+        #cta {
+            border-radius: 10px;
+            background-color: rgb(60, 50, 70);
+            left: 71px;
+            top: 131px;
+            width: 170px;
+            height: 44px;
+            
+        }
+
+        #ctatxt {
+            font-size: 18px;
+            color: rgb(245, 245, 242);
+            text-align: center;
+            left: 0;
+            right:0;
+            line-height: 45px;
+        }
+           
+        #t2 {
+            text-align:center;
+            top: 82px;
+            color: #5a78ff;
+            width: 100%;
+        }
+
+        #logo {
+            left: 194px;
+            top: 271px;
+        }
+        
+        #swiper__container {
+            top: 105px;
+            left: 8px;
+            width: 300px;
+            height: 81px;
+        }
+
+         #clip__swiper {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 100%;
+            height: 100%;
+            /* Top, Right, Bottom, Left. Width and height of swiper__container */
+            clip: rect(0px 0px 81px 29px);
+        }
+        
+        #clip__swipertext {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            margin: auto;
+            width: 100%;
+            height: 100%;
+            /* Top, Right, Bottom, Left. Width and height of swiper__container */
+            clip: rect(0px 310px 81px 0px);
+        }
+        
+        #swiper__chevron {
+            height: 81px;
+            width: 81px;
+            background-color: #5a78ff;
+            left: 0px;
+            top: 0px;
+            border-radius: 67px;
+            box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.22);
+        }
+        
+        #chevron__image {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 16px;
+            height: 28px;
+        }
+        
+        #swiper__text {
+            left: calc(81px + 15px);
+            margin: auto 0;
+            line-height: 82px;
+            color: #d5b1ab;
+            font-size: 22px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="banner">
+        <div id="exit_click_area"></div>
+        <div id="scene1">
+            <img id="bg1" src="assets/bg1.jpg"  class="img">
+            <div id="t1" class="img">MobilePay til<br>din forretning</div>
+        </div>
+        <div id="scene2">
+            <img id="bg2" src="assets/bg2.jpg"  class="img">
+            <div id="swiper__container" class="img">
+                <div id="clip__swiper" class="img">
+                    <div id="clip__swipertext" class="img">
+                        <span id="swiper__text" class="img">Simpelt som altid</span>
+                    </div>
+                </div>
+                <div id="swiper__chevron" class="img">
+                    <img id="chevron__image" class="img" src="assets/chevron.svg">
+                </div>
+            </div>
+            
+        </div>
+        <div id="scene3">
+            <img id="bg3" src="assets/bg3.jpg"  class="img">
+            <div id="t2" class="img">MobilePay MyShop</div>
+            <div id="cta" class="img">
+                <div id="ctatxt" class="img">
+                    Opret dig her
+                </div>
+            </div>
+        </div>
+        
+        <img id="logo" class="img" src="assets/logo.png"></img>
+        <div id="border" class="img"></div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="SplitText.min.js"></script>
+
+</body>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70.188" height="77.25" viewBox="0 0 70.188 77.25">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ec9685;
+        fill-opacity: 0.3;
+        stroke: #ec9685;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 4px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="_300x250_shape1.svg" data-name="300x250/shape1.svg" class="cls-1" d="M937.355,1668.57s0.206-13.68,1.965-20.9a109.96,109.96,0,0,1,8.9-23.64l-2.314-11.57,0.579-4.05H874.167s-2.645,51.77-1.158,54.96,0.579,35.87.579,35.87,20.6-10.53,32.978-15.62c7.386-3.04,24.425-.58,24.425-0.58Z" transform="translate(-880 -1624)"/>
+</svg>

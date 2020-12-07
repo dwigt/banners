@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+
+
+.wrapper {
+	max-width: 1024px;
+	margin: auto;
+	font-family: "Source Sans Pro"
+}
+
+.center {
+	margin: auto;
+	display: block;
+}
